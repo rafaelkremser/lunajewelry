@@ -1,0 +1,1261 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+:root {
+    --gold: #C2AE9A;
+    --lightbrown: #EEDDCC;
+    --darkbrown: #34251F;
+    --brown: #413531;
+    --orange: #FFB168;
+    --red: #C20A0A;
+    --gradient: #D3A17E;
+}
+body {
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--lightbrown);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--darkbrown);
+    border: 2px solid var(--darkbrown);
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+.rate {
+    pointer-events: none;
+}
+.bg {
+    width: 100%;
+    background: var(--lightbrown);
+}
+.landing {
+    position: relative;
+    height: 100vh;
+    z-index: 10;
+}
+#block1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60%;
+    width: 25%;
+    background: linear-gradient(180deg, #D7B79800 0%, #d7b79870 100%);
+}
+#block2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40%;
+    width: 15%;
+    background: linear-gradient(180deg, #D7B79800 0%, #d7b79885 100%);
+}
+.block4 {
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    height: 130px;
+    width: 130px;
+    background: var(--lightbrown);
+    z-index: 10;
+}
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 10000;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9% 0 3%;
+}
+header nav .logo {
+    position: relative;
+    width: 220px;
+}
+header nav .logo img {
+    margin-top: 13px;
+    width: 100%;
+}
+header nav .menu ul {
+    display: flex;
+    list-style: none;
+}
+header nav .menu ul li a {
+    padding: 5px 20px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.115em;
+    text-transform: uppercase;
+}
+header nav .menu ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--darkbrown);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+header nav .menu ul li:hover::after {
+    width: 40%;
+}
+header nav .shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav .shop .cart {
+    margin: 0 30px;
+}
+header nav .shop .cart .bx {
+    max-width: 35px;
+    font-size: 2.2rem;
+}
+header nav .shop .login {
+    padding: 10px 23px;
+    border: 1px solid var(--darkbrown);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+header nav .shop .login:hover {
+    color: #fff;
+    box-shadow: inset 0 -3.25em 0 0 var(--darkbrown);
+}
+.bg .waves {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.bg .waves img {
+    width: 100%;
+}
+.bg .dots1 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 70px;
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    z-index: 100;
+}
+.bg .dots2 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 84px;
+    position: absolute;
+    top: 40px;
+    right: -30px;
+    z-index: 100;
+}
+.bg .dots3 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 84px;
+    position: absolute;
+    bottom: 40px;
+    left: -30px;
+    z-index: 100;
+}
+.collections .dots4 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 70px;
+    position: absolute;
+    bottom: -8%;
+    right: 3%;
+    z-index: -1;
+}
+.aboutus .dots5 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 70px;
+    position: absolute;
+    top: -35px;
+    right: -10px;
+    z-index: 1;
+}
+.ourproduct .dots6 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 70px;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    z-index: 1;
+}
+.sale .dots7 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    z-index: 1;
+}
+.dots .dot {
+    background-color: var(--darkbrown);
+    width: 4px;
+    height: 4px;
+    -webkit-animation: dots_glow 4s ease infinite;
+    animation: dots_glow 4s ease infinite;
+}
+@keyframes dots_glow {
+    0%, 70% {
+        background-color: var(--darkbrown);
+    }
+    35% {
+        background-color: var(--gradient);
+    }
+}
+.dots .dot:nth-child(1) {
+    -webkit-animation-delay: 60ms;
+    animation-delay: 60ms;
+}
+.dots .dot:nth-child(2) {
+    -webkit-animation-delay: .12s;
+    animation-delay: .12s;
+}
+.dots .dot:nth-child(3) {
+    -webkit-animation-delay: .18s;
+    animation-delay: .18s;
+}
+.dots .dot:nth-child(4) {
+    -webkit-animation-delay: .24s;
+    animation-delay: .24s;
+}
+.dots .dot:nth-child(5) {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+.dots .dot:nth-child(6) {
+    -webkit-animation-delay: .36s;
+    animation-delay: .36s;
+}
+.dots .dot:nth-child(7) {
+    -webkit-animation-delay: .42s;
+    animation-delay: .42s;
+}
+.dots .dot:nth-child(8) {
+    -webkit-animation-delay: .48s;
+    animation-delay: .48s;
+}
+.dots .dot:nth-child(9) {
+    -webkit-animation-delay: .54s;
+    animation-delay: .54s;
+}
+.dots .dot:nth-child(10) {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+.dots .dot:nth-child(11) {
+    -webkit-animation-delay: .66s;
+    animation-delay: .66s;
+}
+.dots .dot:nth-child(12) {
+    -webkit-animation-delay: .72s;
+    animation-delay: .72s;
+}
+.dots .dot:nth-child(13) {
+    -webkit-animation-delay: .78s;
+    animation-delay: .78s;
+}
+.dots .dot:nth-child(14) {
+    -webkit-animation-delay: .84s;
+    animation-delay: .84s;
+}
+.dots .dot:nth-child(15) {
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+}
+.dots .dot:nth-child(16) {
+    -webkit-animation-delay: .96s;
+    animation-delay: .96s;
+}
+.dots .dot:nth-child(17) {
+    -webkit-animation-delay: 1.02s;
+    animation-delay: 1.02s;
+}
+.dots .dot:nth-child(18) {
+    -webkit-animation-delay: 1.08s;
+    animation-delay: 1.08s;
+}
+.dots .dot:nth-child(19) {
+    -webkit-animation-delay: 1.14s;
+    animation-delay: 1.14s;
+}
+.dots .dot:nth-child(20) {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.dots .dot:nth-child(21) {
+    -webkit-animation-delay: 1.26s;
+    animation-delay: 1.26s;
+}
+.dots .dot:nth-child(22) {
+    -webkit-animation-delay: 1.32s;
+    animation-delay: 1.32s;
+}
+.dots .dot:nth-child(23) {
+    -webkit-animation-delay: 1.38s;
+    animation-delay: 1.38s;
+}
+.dots .dot:nth-child(24) {
+    -webkit-animation-delay: 1.44s;
+    animation-delay: 1.44s;
+}
+.dots .dot:nth-child(25) {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+.dots .dot:nth-child(26) {
+    -webkit-animation-delay: 1.56s;
+    animation-delay: 1.56s;
+}
+.dots .dot:nth-child(27) {
+    -webkit-animation-delay: 1.62s;
+    animation-delay: 1.62s;
+}
+.dots .dot:nth-child(28) {
+    -webkit-animation-delay: 1.68s;
+    animation-delay: 1.68s;
+}
+.dots .dot:nth-child(29) {
+    -webkit-animation-delay: 1.74s;
+    animation-delay: 1.74s;
+}
+.dots .dot:nth-child(30) {
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.dots .dot:nth-child(31) {
+    -webkit-animation-delay: 1.86s;
+    animation-delay: 1.86s;
+}
+.dots .dot:nth-child(32) {
+    -webkit-animation-delay: 1.92s;
+    animation-delay: 1.92s;
+}
+.dots .dot:nth-child(33) {
+    -webkit-animation-delay: 1.98s;
+    animation-delay: 1.98s;
+}
+.dots .dot:nth-child(34) {
+    -webkit-animation-delay: 2.04s;
+    animation-delay: 2.04s;
+}
+.dots .dot:nth-child(35) {
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s;
+}
+.dots .dot:nth-child(36) {
+    -webkit-animation-delay: 2.16s;
+    animation-delay: 2.16s;
+}
+.dots .dot:nth-child(37) {
+    -webkit-animation-delay: 2.22s;
+    animation-delay: 2.22s;
+}
+.dots .dot:nth-child(38) {
+    -webkit-animation-delay: 2.28s;
+    animation-delay: 2.28s;
+}
+.dots .dot:nth-child(39) {
+    -webkit-animation-delay: 2.34s;
+    animation-delay: 2.34s;
+}
+.dots .dot:nth-child(40) {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+.dots .dot:nth-child(41) {
+    -webkit-animation-delay: 2.46s;
+    animation-delay: 2.46s;
+}
+.dots .dot:nth-child(42) {
+    -webkit-animation-delay: 2.52s;
+    animation-delay: 2.52s;
+}
+.dots .dot:nth-child(43) {
+    -webkit-animation-delay: 2.58s;
+    animation-delay: 2.58s;
+}
+.dots .dot:nth-child(44) {
+    -webkit-animation-delay: 2.64s;
+    animation-delay: 2.64s;
+}
+.dots .dot:nth-child(45) {
+    -webkit-animation-delay: 2.7s;
+    animation-delay: 2.7s;
+}
+.dots .dot:nth-child(46) {
+    -webkit-animation-delay: 2.76s;
+    animation-delay: 2.76s;
+}
+.dots .dot:nth-child(47) {
+    -webkit-animation-delay: 2.82s;
+    animation-delay: 2.82s;
+}
+.dots .dot:nth-child(48) {
+    -webkit-animation-delay: 2.88s;
+    animation-delay: 2.88s;
+}
+.dots .dot:nth-child(49) {
+    -webkit-animation-delay: 2.94s;
+    animation-delay: 2.94s;
+}
+.dots .dot:nth-child(50) {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.dots .dot:nth-child(51) {
+    -webkit-animation-delay: 3.06s;
+    animation-delay: 3.06s;
+}
+.dots .dot:nth-child(52) {
+    -webkit-animation-delay: 3.12s;
+    animation-delay: 3.12s;
+}
+.dots .dot:nth-child(53) {
+    -webkit-animation-delay: 3.18s;
+    animation-delay: 3.18s;
+}
+.dots .dot:nth-child(54) {
+    -webkit-animation-delay: 3.24s;
+    animation-delay: 3.24s;
+}
+.dots .dot:nth-child(55) {
+    -webkit-animation-delay: 3.3s;
+    animation-delay: 3.3s;
+}
+.dots .dot:nth-child(56) {
+    -webkit-animation-delay: 3.36s;
+    animation-delay: 3.36s;
+}
+.dots .dot:nth-child(57) {
+    -webkit-animation-delay: 3.42s;
+    animation-delay: 3.42s;
+}
+.dots .dot:nth-child(58) {
+    -webkit-animation-delay: 3.48s;
+    animation-delay: 3.48s;
+}
+.dots .dot:nth-child(59) {
+    -webkit-animation-delay: 3.54s;
+    animation-delay: 3.54s;
+}
+.dots .dot:nth-child(60) {
+    -webkit-animation-delay: 3.6s;
+    animation-delay: 3.6s;
+}
+.landing .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 13%;
+    z-index: 10;
+}
+.landing .container .content {
+    display: flex;
+    justify-content: center;
+}
+.landing .container .content .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15%;
+}
+.landing .container .content .text h1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    font-size: 4.3rem;
+    line-height: 78px;
+    text-transform: capitalize;
+    color: var(--darkbrown);
+}
+.landing .container .content .text p {
+    margin-top: 6%;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+.landing .container .content .text a {
+    width: 150px;
+    color: #fff;
+    padding: 18px 0;
+    background: var(--darkbrown);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.25s;
+}
+.landing .container .content .text a:hover {
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 0.5em -0.4em #000;
+    transition: 0.25s;
+}
+.landing .container .content .ilustration {
+    position: relative;
+}
+.landing .container .content .ilustration img {
+    height: 450px;
+}
+.collections .container {
+    height: 100vh;
+    padding: 5% 10%;
+}
+.collections .container .content {
+    height: 100%;
+}
+.collections .container .content .title h1 {
+    color: var(--darkbrown);
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 3rem;
+    text-align: center;
+}
+.collections .container .content .title p {
+    color: var(--darkbrown);
+    text-align: center;
+    margin: 2% 0 5% 0;
+}
+.collections .container .content .cards .block3 {
+    position: absolute;
+    right: -1%;
+    bottom: -14%;
+    height: 200px;
+    width: 200px;
+    background: var(--lightbrown);
+    opacity: 0.3;
+    z-index: -2;
+}
+.collections .container .content .cards {
+    height: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.collections .container .content .cards .card {
+    position: relative;
+    height: 100%;
+    margin: 0 3%;
+}
+.collections .container .content .cards .card img {
+    height: 100%;
+}
+.collections .container .content .cards .card span {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0;
+    width: 75%;
+    background: #fff;
+    font-size: 0.9rem;
+    color: var(--darkbrown);
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s;
+}
+.collections .container .content .cards .card .shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: .3s;
+}
+.collections .container .content .cards .card:hover .shadow {
+    opacity: 1;
+    transition: .3s;
+}
+.aboutus .container {
+    position: relative;
+    padding: 2% 10% 5% 10%;
+    height: 100vh;
+}
+.aboutus .container .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.aboutus .container .content .text {
+    margin-top: 1%;
+    margin-left: 9%;
+    width: 50%;
+}
+.aboutus .container .content .text h1 {
+    font-size: 3.9rem;
+    font-family: 'Frank Rulh Libre', serif;
+    color: var(--darkbrown);
+    text-transform: capitalize;
+}
+.aboutus .container .content .text p {
+    margin-top: 30px;
+    width: 85%;
+    font-size: 1.1rem;
+    line-height: 30px;
+}
+.aboutus .container .content .ilustration {
+    position: relative;
+    height: 80%;
+}
+.aboutus .container .content .ilustration img {
+    height: 100%;
+}
+.aboutus .container .content .status {
+    position: absolute;
+    left: 30%;
+    bottom: 20%;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+.aboutus .container .content .status .infs {
+    position: relative;
+    width: 180px;
+}
+.aboutus .container .content .status .infs::after {
+    content: '';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #afafaf75;
+}
+.aboutus .container .content .status .avl::after {
+    background: transparent;
+}
+.aboutus .container .content .status .infs h2 {
+    font-size: 1.7rem;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 800;
+    margin: 3px;
+}
+.aboutus .container .content .status .infs label {
+    font-size: .9rem;
+}
+.aboutus .container .shadow {
+    position: absolute;
+    bottom: -100%;
+    right: -50%;
+    width: 779px;
+    height: 779px;
+    opacity: 0.3;
+    background: var(--lightbrown);
+    border: 1px solid var(--lightbrown);
+    filter: blur(269px);
+    z-index: -10;
+}
+.bestseller .container {
+    position: relative;
+    color: #fff;
+    background: var(--darkbrown);
+    z-index: 1;
+}
+.bestseller .container .content {
+    display: flex;
+    justify-content: center;
+    padding: 2% 0 2% 10%;
+}
+.bestseller .container .content .text h1 {
+    margin-top: 9%;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 2.7rem;
+    text-transform: capitalize;
+}
+.bestseller .container .content .text p {
+    margin: 5% 0 15% 0;
+    text-transform: capitalize;
+}
+.bestseller .container .content .text a {
+    display: block;
+    color: #fff;
+    width: 40%;
+    padding: 5% 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid #fff;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s;
+}
+.bestseller .container .content .text a:hover {
+    color: var(--darkbrown);
+    box-shadow: inset 0 -4.5em 0 0 #fff;
+}
+.bestseller .container .content .text {
+    margin-top: 4%;
+    margin-right: 5%;
+}
+.bestseller .container .content .cards {
+    display: flex;
+    max-width: 1300px;
+}
+.bestseller .container .content .cards .card {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 363px;
+    margin: 0px 60px 0px 0px;
+}
+.bestseller .container .content .cards .card .topcard {
+    height: 369px;
+    width: 100%;
+}
+.bestseller .container .content .cards .card .bestseller1 {
+    background: url('assets/bestseller/bestseller1.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .bestseller2 {
+    background: url('assets/bestseller/bestseller2.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .bestseller3 {
+    background: url('assets/bestseller/bestseller3.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .bestseller4 {
+    background: url('assets/bestseller/bestseller4.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .bestseller5 {
+    background: url('assets/bestseller/bestseller5.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .bestseller6 {
+    background: url('assets/bestseller/bestseller6.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .bestseller7 {
+    background: url('assets/bestseller/bestseller7.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .bestseller8 {
+    background: url('assets/bestseller/bestseller8.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .bestseller9 {
+    background: url('assets/bestseller/bestseller9.png');
+    background-size: cover;
+    background-position: center;
+}
+.bestseller .container .content .cards .card .topcard img {
+    display: none;
+    height: 100%;
+}
+.bestseller .container .content .cards .card .bottomcard {
+    width: 100%;
+    padding: 13px 20px 20px 20px;
+    color: var(--darkbrown);
+    background: #fff;
+}
+.bestseller .container .content .cards .card .bottomcard .rate {
+    width: 90px;
+    margin-bottom: 8px;
+    pointer-events: none;
+}
+.bestseller .container .content .cards .card .bottomcard .name {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.bestseller .container .content .cards .card .bottomcard .price {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.bestseller .container .content .cards .card .bottomcard .price span {
+    color: var(--red);
+    text-decoration: line-through;
+    opacity: .2;
+}
+.bestseller .container .waves {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: .3;
+    pointer-events: none;
+    z-index: -1;
+}
+.swiper-slide {
+    opacity: .5;
+    transition: .2s ease;
+}
+.swiper-slide-active, .swiper-slide-next {
+    opacity: 1;
+    transition: .2s ease;
+}
+.swiper-wrapper {
+    padding: 40px 0;
+}
+.ourproduct .container {
+    position: relative;
+}
+.ourproduct .container .content {
+    padding: 5% 10%;
+}
+.ourproduct .container .content .title h1 {
+    text-align: center;
+    font-family: 'Frank Ruhl Libre';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    color: var(--darkbrown);
+}
+.ourproduct .container .content .products .menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+.ourproduct .container .content .products .menu nav {
+    position: relative;
+    margin: 30px auto 30px;
+}
+.ourproduct .container .content .products .menu nav a {
+    position: relative;
+    display: inline-block;
+    height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.115em;
+    cursor: pointer;
+    z-index: 1;
+}
+.ourproduct .container .content .products .menu nav a:active {
+    font-weight: 900;
+}
+.ourproduct .container .content .products .menu nav .home {
+    font-weight: 900;
+}
+.ourproduct .menu nav .animation {
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    background: var(--darkbrown);
+    width: 60px;
+    z-index: 0;
+    transition: all .5s ease 0s;
+}
+.ourproduct .menu nav a:nth-child(1) {
+    width: 60px;
+}
+.ourproduct .menu nav .start-home,.ourproduct .menu nav a:nth-child(1):hover~.animation {
+    width: 60px;
+    left: 0;
+}
+.ourproduct .menu nav a:nth-child(2) {
+    width: 130px;
+}
+.ourproduct .menu nav .start-promocao,.ourproduct .menu nav a:nth-child(2):hover~.animation {
+    width: 130px;
+    left: 60px;
+}
+.ourproduct .menu nav a:nth-child(3) {
+    width: 200px;
+}
+.ourproduct .menu nav .start-trend,.ourproduct .menu nav a:nth-child(3):hover~.animation {
+    width: 200px;
+    left: 190px;
+}
+.ourproduct .menu nav a:nth-child(4) {
+    width: 90px;
+}
+.ourproduct .menu nav .start-new,.ourproduct .menu nav a:nth-child(4):hover~.animation {
+    width: 90px;
+    left: 397px;
+}
+.ourproduct .container .content .products .cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+.ourproduct .container .content .products .cards .card {
+    width: 226px;
+}
+.ourproduct .container .content .products .cards .card .topcard .shadow {
+    position: absolute;
+    bottom: -100%;
+    height: 100%;
+    width: 100%;
+    background: #34251ff6;
+    transition: .4s;
+}
+.ourproduct .container .content .products .cards .card:hover .topcard .shadow {
+    bottom: 0;
+}
+.ourproduct .container .content .products .cards .card .topcard span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: .3s;
+}
+.ourproduct .container .content .products .cards .card:hover .topcard span {
+    opacity: 1;
+}
+.ourproduct .container .content .products .cards .card .topcard {
+    position: relative;
+    height: 255px;
+    width: 226px;
+    pointer-events: none;
+    transition: .3s;
+    overflow: hidden;
+}
+.ourproduct .container .content .products .cards .card1 .topcard {
+    background: url('assets/ouproduct/image1.png');
+    background-position: center;
+    background-size: cover;
+}
+.ourproduct .container .content .products .cards .card2 .topcard {
+    background: url('assets/ouproduct/image2.png');
+    background-position: center;
+    background-size: cover;
+}
+.ourproduct .container .content .products .cards .card3 .topcard {
+    background: url('assets/ouproduct/image3.png');
+    background-position: center;
+    background-size: cover;
+}
+.ourproduct .container .content .products .cards .card4 .topcard {
+    background: url('assets/ouproduct/image4.png');
+    background-position: center;
+    background-size: cover;
+}
+.ourproduct .container .content .products .cards .card5 .topcard {
+    background: url('assets/ouproduct/image5.png');
+    background-position: center;
+    background-size: cover;
+}
+.ourproduct .container .content .products .cards .card6 .topcard {
+    background: url('assets/ouproduct/image6.png');
+    background-position: center;
+    background-size: cover;
+}
+.ourproduct .container .content .products .cards .card7 .topcard {
+    background: url('assets/ouproduct/image7.png');
+    background-position: center;
+    background-size: cover;
+}
+.ourproduct .container .content .products .cards .card8 .topcard {
+    background: url('assets/ouproduct/image8.png');
+    background-position: center;
+    background-size: cover;
+}
+.ourproduct .container .content .products .cards .card .topcard img {
+    height: 100%;
+}
+.ourproduct .container .content .products .cards .card .bottomcard {
+    padding: 7% 0;
+    text-align: center;
+}
+.ourproduct .container .content .products .cards .card .bottomcard .rate img {
+    width: 80px;
+}
+.ourproduct .container .content .products .cards .card .bottomcard .name {
+    margin: 9px;
+    font-family: 'Frank Rulh Libre', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--darkbrown);
+}
+.ourproduct .container .content .products .cards .card .bottomcard .price {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--darkbrown);
+}
+.ourproduct .container .content .products .cards .card .bottomcard .price span {
+    color: var(--lightbrown);
+    text-decoration: line-through;   
+    margin-right: 3px; 
+}
+.sale .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 6% 0;
+}
+.sale .container .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--lightbrown);
+    padding: 3% 7% 0 5%;
+    border-radius: 5px;
+    width: 1100px;
+    overflow: hidden;
+}
+.sale .container .content .text {
+    padding-bottom: 3%;
+    margin-right: 13%;
+}
+.sale .container .content .text h1 {
+    font-family: 'Frank Ruhl Libre';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    text-transform: capitalize;
+    color: var(--darkbrown);
+}
+.sale .container .content .text p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    text-transform: capitalize;
+    color: var(--darkbrown);
+}
+.sale .container .content .text .time {
+    display: flex;
+    margin: 30px 0;
+}
+.sale .container .content .text .time .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    margin: 0 18px 0 0;
+    color: var(--darkbrown);
+}
+.sale .container .content .text .time .cont label {  
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+}
+.sale .container .content .text .time .cont p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.sale .container .content .text a {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 32px;
+    color: #fff;
+    background: var(--darkbrown);
+    padding: 13px 35px;
+}
+.sale .container .content .ilustration {
+    position: relative;
+    height: 420px;
+    z-index: 2;
+}
+.sale .container .content .ilustration img {
+    height: 100%;
+    pointer-events: none;
+}
+.sale .container .content #block5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60%;
+    width: 33%;
+    background: linear-gradient(360deg, #D3A17E -21.17%, rgba(211, 161, 126, 0) 115.88%);
+    opacity: 0.6;
+    z-index: 1;
+}
+.testimoni .title h1 {
+    font-family: 'Frank Ruhl Libre';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--darkbrown);
+}
+.testimoni .title p {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 180%;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--darkbrown);
+}
+.testimoni .cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 7%;
+}
+.testimoni .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--lightbrown);
+    width: 557px;
+    padding: 3% 6%;
+    border-radius: 4px;
+    text-align: center;
+}
+.testimoni .cards .card h5 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 157%;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 4%;
+}
+.testimoni .cards .card p {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: .8;
+}
+.testimoni .cards .card .perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimoni .cards .card .perfil .name {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+}
+.testimoni .cards .card .perfil .office {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: .5;
+}
+.testimoni .cards .card1 .perfil .photo {
+    height: 77px;
+    width: 77px;
+    background: url('assets/testimoni/card1.png');
+    margin: 14% 0;
+}
+.testimoni .cards .card2 .perfil .photo {
+    height: 77px;
+    width: 77px;
+    background: url('assets/testimoni/card2.png');
+    margin: 14% 0;
+}
+footer {
+    background: var(--darkbrown);
+}
+footer .container {
+    text-align: center;
+    padding: 7% 0;
+}
+footer .container .buttons a {
+    color: #fff;
+    margin: 0 1%;font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.115em;
+    text-transform: uppercase;
+    transition: .2s;
+}
+footer .container .buttons a:hover {
+    color: var(--lightbrown);
+}
+footer .container .copyright {
+    margin-top: 2%;
+    color: #fff;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: 0.67;
+}
+@media (min-width: 1600px) {
+    .landing .container .content .ilustration img {
+        height: 35rem;
+    }
+    .landing .container .content .text h1 {
+        font-size: 5rem;
+    }
+    .landing .container .content .text p {
+        font-size: 1.4rem;
+    }
+    .landing .container .content .text a {
+        width: 170px;
+        padding: 18px 0;
+    }
+    .collections .container .content .cards .card .shadow {
+        font-size: 1.2rem;
+    }
+}
